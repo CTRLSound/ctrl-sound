@@ -195,20 +195,26 @@ const Spotlight = () => (
 
 // Services Section
 const Services = () => (
-  <section id="services" className="py-24 px-4 text-center bg-neutral-950">
-    <motion.h2 {...fadeIn()} className="text-3xl font-bold text-cyan-400 mb-10">What We Offer</motion.h2>
+  <section id="services" className="py-24 px-4 text-center bg-black">
+    <motion.h2 {...fadeIn()} className="text-3xl font-bold text-cyan-400 mb-10">
+      What We Offer
+    </motion.h2>
     <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
       {[{
-        title: "DJ Branding",
-        desc: "Logos, identity, colors — we help shape a brand that feels like music."
+        title: "New DJs",
+        desc: "We give up-and-coming DJs the platform to shine. From exclusive gigs to brand-building, we ensure your sound gets heard and your name is recognized in Connecticut's hottest spots."
       }, {
-        title: "Event Placement",
-        desc: "Our network plugs you into CT’s biggest parties, lounges & events."
+        title: "Underground Artists",
+        desc: "We shine a spotlight on raw, uncut talent. Whether you're a DJ, musician, or visual artist, we help you connect with the right crowd and elevate your career to the next level."
       }, {
-        title: "Social Growth",
-        desc: "Reels, flyers, visuals — we amplify your presence everywhere."
+        title: "Event Curators",
+        desc: "We empower event curators with the resources they need to create unforgettable experiences. From venue connections to promotional strategies, we help turn your vision into a reality."
       }].map((card, i) => (
-        <motion.div key={i} {...fadeIn(i * 0.2)} className="bg-neutral-800 p-6 rounded-xl hover:scale-105 transition-transform">
+        <motion.div
+          key={i}
+          {...fadeIn(i * 0.2)}
+          className="bg-neutral-800 p-6 rounded-xl hover:scale-105 transition-transform shadow-lg"
+        >
           <h3 className="text-xl font-semibold text-white mb-2">{card.title}</h3>
           <p className="text-gray-400">{card.desc}</p>
         </motion.div>
@@ -216,6 +222,7 @@ const Services = () => (
     </div>
   </section>
 );
+
 
 const Contact = () => (
   <section id="contact" className="py-24 bg-black px-4 text-center">
