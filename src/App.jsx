@@ -176,45 +176,58 @@ const LogoAnimated = () => (
 );
 
 const Spotlight = () => (
-  <section id="spotlight" className="py-24 px-4 bg-black text-center">
-    <motion.h2 {...fadeIn()} className="text-3xl font-bold text-cyan-400 mb-10">Who We Promote</motion.h2>
-    <div className="flex overflow-x-auto gap-6 snap-x max-w-full px-4">
-      {["New DJs", "Underground Artists", "Event Curators"].map((name, i) => (
-        <motion.div
-          key={i}
-          {...fadeIn(i * 0.2)}
-          className="min-w-[300px] snap-center bg-neutral-900 p-6 rounded-xl shadow-lg hover:shadow-cyan-500/20 transition"
-        >
-          <h3 className="text-xl font-semibold text-white mb-2">{name}</h3>
-          <p className="text-gray-400">We help {name.toLowerCase()} get seen, booked, and celebrated in CT.</p>
-        </motion.div>
-      ))}
-    </div>
-  </section>
+  <section id="spotlight" className="py-24 px-4 text-center bg-black">
+  <motion.h2 {...fadeIn()} className="text-3xl font-bold text-cyan-400 mb-10">
+    Spotlight
+  </motion.h2>
+  <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <motion.div
+      {...fadeIn(0.2)}
+      className="bg-neutral-800 p-6 rounded-xl hover:scale-105 transition-transform shadow-lg"
+    >
+      <h3 className="text-xl font-semibold text-white mb-2">New DJs</h3>
+      <p className="text-gray-400">
+        We give new DJs the visibility and opportunities they need to get booked and perform at Connecticut’s hottest venues.
+      </p>
+    </motion.div>
+    <motion.div
+      {...fadeIn(0.4)}
+      className="bg-neutral-800 p-6 rounded-xl hover:scale-105 transition-transform shadow-lg"
+    >
+      <h3 className="text-xl font-semibold text-white mb-2">Underground Artists</h3>
+      <p className="text-gray-400">
+        We’re all about supporting underground talent, helping them build their brand and connect with the right audience.
+      </p>
+    </motion.div>
+    <motion.div
+      {...fadeIn(0.6)}
+      className="bg-neutral-800 p-6 rounded-xl hover:scale-105 transition-transform shadow-lg"
+    >
+      <h3 className="text-xl font-semibold text-white mb-2">Event Curators</h3>
+      <p className="text-gray-400">
+        Curating unforgettable events is our specialty. We work with event curators to make their visions come to life, from concept to execution.
+      </p>
+    </motion.div>
+  </div>
+</section>
 );
 
 // Services Section
 const Services = () => (
-  <section id="services" className="py-24 px-4 text-center bg-black">
-    <motion.h2 {...fadeIn()} className="text-3xl font-bold text-cyan-400 mb-10">
-      What We Offer
-    </motion.h2>
+  <section id="services" className="py-24 px-4 text-center bg-neutral-950">
+    <motion.h2 {...fadeIn()} className="text-3xl font-bold text-cyan-400 mb-10">What We Offer</motion.h2>
     <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
       {[{
-        title: "New DJs",
-        desc: "We give up-and-coming DJs the platform to shine. From exclusive gigs to brand-building, we ensure your sound gets heard and your name is recognized in Connecticut's hottest spots."
+        title: "DJ Branding",
+        desc: "Logos, identity, colors — we help shape a brand that feels like music."
       }, {
-        title: "Underground Artists",
-        desc: "We shine a spotlight on raw, uncut talent. Whether you're a DJ, musician, or visual artist, we help you connect with the right crowd and elevate your career to the next level."
+        title: "Event Placement",
+        desc: "Our network plugs you into CT’s biggest parties, lounges & events."
       }, {
-        title: "Event Curators",
-        desc: "We empower event curators with the resources they need to create unforgettable experiences. From venue connections to promotional strategies, we help turn your vision into a reality."
+        title: "Social Growth",
+        desc: "Reels, flyers, visuals — we amplify your presence everywhere."
       }].map((card, i) => (
-        <motion.div
-          key={i}
-          {...fadeIn(i * 0.2)}
-          className="bg-neutral-800 p-6 rounded-xl hover:scale-105 transition-transform shadow-lg"
-        >
+        <motion.div key={i} {...fadeIn(i * 0.2)} className="bg-neutral-800 p-6 rounded-xl hover:scale-105 transition-transform">
           <h3 className="text-xl font-semibold text-white mb-2">{card.title}</h3>
           <p className="text-gray-400">{card.desc}</p>
         </motion.div>
@@ -223,11 +236,10 @@ const Services = () => (
   </section>
 );
 
-
 const Contact = () => (
   <section id="contact" className="py-24 bg-black px-4 text-center">
     <motion.h2 {...fadeIn()} className="text-3xl font-bold text-cyan-400 mb-6">Book With Us</motion.h2>
-<motion.form action="https://formspree.io/f/mgvalayk" method="POST" {...fadeIn(0.3)} className="max-w-xl mx-auto space-y-6">
+<motion.form action="https://formspree.io/f/your_form_id" method="POST" {...fadeIn(0.3)} className="max-w-xl mx-auto space-y-6">
 <input 
   type="text" 
   name="name"  // Add the name field here
