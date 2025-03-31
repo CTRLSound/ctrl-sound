@@ -234,6 +234,40 @@ const Services = () => (
       ))}
     </div>
   </section>
+  <section id="services" className="py-24 px-4 text-center bg-black">
+  <motion.h2 {...fadeIn()} className="text-3xl font-bold text-cyan-400 mb-10">
+    What We Offer
+  </motion.h2>
+  <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <motion.div
+      {...fadeIn(0.2)}
+      className="bg-neutral-800 p-6 rounded-xl hover:scale-105 transition-transform shadow-lg"
+    >
+      <h3 className="text-xl font-semibold text-white mb-2">DJ Branding</h3>
+      <p className="text-gray-400">
+        From designing your logo to curating your identity, we help shape a brand that speaks to your audience. We focus on creating a visually compelling presence that resonates with your sound and vibe, ensuring you stand out in a competitive market.
+      </p>
+    </motion.div>
+    <motion.div
+      {...fadeIn(0.4)}
+      className="bg-neutral-800 p-6 rounded-xl hover:scale-105 transition-transform shadow-lg"
+    >
+      <h3 className="text-xl font-semibold text-white mb-2">Event Placement</h3>
+      <p className="text-gray-400">
+        Our extensive network in Connecticut connects you with high-profile events, venues, and private parties. Whether you're aiming for intimate gatherings or large-scale festivals, we make sure you're in the right place to make an impact and expand your reach.
+      </p>
+    </motion.div>
+    <motion.div
+      {...fadeIn(0.6)}
+      className="bg-neutral-800 p-6 rounded-xl hover:scale-105 transition-transform shadow-lg"
+    >
+      <h3 className="text-xl font-semibold text-white mb-2">Social Growth</h3>
+      <p className="text-gray-400">
+        In today’s digital age, your online presence is everything. We specialize in creating eye-catching content, including reels, flyers, and social visuals, to amplify your reach across platforms like Instagram, TikTok, and more. We ensure your brand stays visible and growing, keeping you top of mind.
+      </p>
+    </motion.div>
+  </div>
+</section>
 );
 
 const Contact = () => (
