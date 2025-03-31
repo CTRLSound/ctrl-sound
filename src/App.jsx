@@ -210,11 +210,30 @@ const Spotlight = () => (
     </motion.div>
   </div>
 </section>
-
 );
 
 // Services Section
 const Services = () => (
+  <section id="services" className="py-24 px-4 text-center bg-neutral-950">
+    <motion.h2 {...fadeIn()} className="text-3xl font-bold text-cyan-400 mb-10">What We Offer</motion.h2>
+    <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      {[{
+        title: "DJ Branding",
+        desc: "Logos, identity, colors — we help shape a brand that feels like music."
+      }, {
+        title: "Event Placement",
+        desc: "Our network plugs you into CT’s biggest parties, lounges & events."
+      }, {
+        title: "Social Growth",
+        desc: "Reels, flyers, visuals — we amplify your presence everywhere."
+      }].map((card, i) => (
+        <motion.div key={i} {...fadeIn(i * 0.2)} className="bg-neutral-800 p-6 rounded-xl hover:scale-105 transition-transform">
+          <h3 className="text-xl font-semibold text-white mb-2">{card.title}</h3>
+          <p className="text-gray-400">{card.desc}</p>
+        </motion.div>
+      ))}
+    </div>
+  </section>
   <section id="services" className="py-24 px-4 text-center bg-black">
   <motion.h2 {...fadeIn()} className="text-3xl font-bold text-cyan-400 mb-10">
     What We Offer
@@ -251,11 +270,10 @@ const Services = () => (
 </section>
 );
 
-
 const Contact = () => (
   <section id="contact" className="py-24 bg-black px-4 text-center">
     <motion.h2 {...fadeIn()} className="text-3xl font-bold text-cyan-400 mb-6">Book With Us</motion.h2>
-<motion.form action="https://formspree.io/f/mgvalayk" method="POST" {...fadeIn(0.3)} className="max-w-xl mx-auto space-y-6">
+<motion.form action="https://formspree.io/f/your_form_id" method="POST" {...fadeIn(0.3)} className="max-w-xl mx-auto space-y-6">
 <input 
   type="text" 
   name="name"  // Add the name field here
