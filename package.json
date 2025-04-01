@@ -1,26 +1,6 @@
-{
-  "name": "ctrl-sound",
-  "version": "1.0.0",
-  "homepage": "https://ctrlsound.github.io/ctrl-sound/",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-  },
-  "dependencies": {
-    "@fontsource/orbitron": "^5.2.5",
-    "@vitejs/plugin-react": "^4.3.4",
-    "framer-motion": "^12.6.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "gh-pages": "^6.1.0",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^3.4.17",
-    "vite": "^4.5.0"
-  }
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
 }
