@@ -306,14 +306,25 @@ const Footer = () => (
   <footer className="py-10 bg-black text-center text-sm text-gray-500">
     <p>&copy; 2025 CTRL Sound. Built for the future of DJ culture.</p>
     <div className="mt-4 flex justify-center gap-6">
-      {['Instagram', 'TikTok', 'Email'].map((p, i) => (
-        <a key={i} href="#" className="text-cyan-400 hover:text-white transition">
-          {p}
-        </a>
-      ))}
+      <a
+        href="https://instagram.com/ctrl_soundct"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-cyan-400 hover:text-white transition"
+      >
+        Instagram
+      </a>
+      <span className="text-gray-400">TikTok (coming soon)</span>
+      <a
+        href="mailto:ctrlsound17@gmail.com"
+        className="text-cyan-400 hover:text-white transition"
+      >
+        Email
+      </a>
     </div>
   </footer>
 );
+
 
 const ParticlesBackground = () => (
   <div className="fixed top-0 left-0 w-full h-full z-0 pointer-events-none overflow-hidden">
